@@ -1,0 +1,23 @@
+def identify_language(n, lines):
+    count_t = 0
+    count_s = 0
+
+    for line in lines:
+         count_t += line.count('t') + line.count('T')
+         count_s += line.count('s') + line.count('S')
+
+    if count_t > count_s:
+        print("English")
+    else:
+        print("French")
+
+#Reading input
+
+n = int(input())  # Number of lines
+lines = []
+for i in range(n):
+    lines.append(input())
+
+#Identify the language
+
+identify_language(n, lines)
